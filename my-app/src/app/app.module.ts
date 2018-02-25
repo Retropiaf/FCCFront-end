@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 import { ChaptersComponent } from './chapters/chapters.component';
 
 
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { FormsModule } from '@angular/forms';
+import { ChapterDetailComponent } from './chapter-detail/chapter-detail.component'; // <-- NgModel lives here
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChaptersComponent
+    ChaptersComponent,
+    ChapterDetailComponent
   ],
   imports: [
     BrowserModule,
