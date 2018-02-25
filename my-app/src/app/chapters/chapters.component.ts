@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chapter } from '../chapter';
-import { CHAPTERS } from '../mock-chapters';
+import { ChapterService } from '../chapter.service';
 
 @Component({
 
@@ -9,17 +9,24 @@ import { CHAPTERS } from '../mock-chapters';
   styleUrls: ['./chapters.component.css'],
 })
 export class ChaptersComponent implements OnInit {
-  chapters = CHAPTERS;
+  chapters: Chapter[];
+
   selectedChapter: Chapter;
 
-  constructor() { }
+  constructor(private chapterService: ChapterService) { }
 
   ngOnInit() {
+    this.getChapters();
   }
 
   onSelect(chapter: Chapter): void {
     this.selectedChapter = chapter;
 
   }
+
+  getChapters(): void {
+    this.chapterService.getChapters().subscribe(chapters => this.chapters = chapters);
+}
+
 
 }

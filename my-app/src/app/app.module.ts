@@ -7,8 +7,10 @@ import { ChaptersComponent } from './chapters/chapters.component';
 
 
 import { FormsModule } from '@angular/forms';
+
 import { ChapterDetailComponent } from './chapter-detail/chapter-detail.component'; // <-- NgModel lives here
 
+import { ChapterService } from './chapter.service';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { ChapterDetailComponent } from './chapter-detail/chapter-detail.componen
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    ChapterService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
