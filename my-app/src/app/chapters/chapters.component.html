@@ -1,3 +1,15 @@
-<p>
-  chapters works!
-</p>
+<h2>List of Chapters</h2>
+<ul class="chapters">
+  <li *ngFor="let chapter of chapters" [class.selected]="chapter === selectedChapter" (click)="onSelect(chapter)">
+    <span class="badge">{{chapter.id}}</span> {{chapter.title}}
+  </li>
+  <div *ngIf="selectedChapter">
+    <h2>{{ selectedChapter.title | uppercase }} Details</h2>
+    <div><span>id: </span>{{selectedChapter.id}}</div>
+    <div>
+      <label>title:
+        <input [(ngModel)]="selectedChapter.title" placeholder="title">
+      </label>
+    </div>
+  </div>
+</ul>
