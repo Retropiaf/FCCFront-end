@@ -1,3 +1,9 @@
-<p>
-  chapter-detail works!
-</p>
+<div *ngIf="chapter">
+  <h2>{{ chapter.title | uppercase }} Details</h2>
+  <div><span>id: </span>{{chapter.id}}</div>
+  <div>
+    <label>title:
+      <input [(ngModel)]="chapter.title" placeholder="title">
+    </label>
+  </div>
+</div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Chapter } from '../chapter';
 
 @Component({
   selector: 'app-chapter-detail',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chapter-detail.component.css']
 })
 export class ChapterDetailComponent implements OnInit {
-
+  @Input() chapter: Chapter;
   constructor() { }
 
   ngOnInit() {
