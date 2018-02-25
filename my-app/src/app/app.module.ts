@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ChapterDetailComponent } from './chapter-detail/chapter-detail.component'; // <-- NgModel lives here
 
 import { ChapterService } from './chapter.service';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ChapterService } from './chapter.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [
     ChapterService,
