@@ -12,13 +12,15 @@ import { ChapterDetailComponent } from './chapter-detail/chapter-detail.componen
 
 import { ChapterService } from './chapter.service';
 import { AppRoutingModule } from './/app-routing.module';
+import { ChallengeComponent } from './challenge/challenge.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ChaptersComponent,
-    ChapterDetailComponent
+    ChapterDetailComponent,
+    ChallengeComponent
   ],
   imports: [
     BrowserModule,
