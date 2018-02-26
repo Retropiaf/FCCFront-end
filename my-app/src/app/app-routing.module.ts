@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChaptersComponent }      from './chapters/chapters.component';
+import { ChaptersComponent } from './chapters/chapters.component';
+import { ChallengesComponent } from './challenges/challenges.component';
 
 const routes: Routes = [
-  { path: 'chapters', component: ChaptersComponent }
+  { path: '', redirectTo: '/chapters', pathMatch: 'full' }, { path: 'chapters', component: ChaptersComponent }, { path: 'challenges', component: ChallengesComponent }
 ];
 
 

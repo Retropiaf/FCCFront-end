@@ -26,7 +26,7 @@ export class ChaptersComponent implements OnInit {
 
   getChapters(): void {
     this.chapterService.getChapters().subscribe(chapters => this.chapters = chapters);
-}
+  }
 
 
 }

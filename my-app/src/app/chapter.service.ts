@@ -10,7 +10,7 @@ export class ChapterService {
   constructor() { }
 
   getChapters(): Observable<Chapter[]> {
-  return of(CHAPTERS);
-}
+    return of(CHAPTERS);
+  }
 
 }
