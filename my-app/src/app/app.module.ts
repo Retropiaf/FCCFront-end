@@ -15,6 +15,7 @@ import { ChallengeService } from './challenge.service';
 
 
 import { AppRoutingModule } from './/app-routing.module';
+import { ChallengePageComponent } from './challenge-page/challenge-page.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AppRoutingModule } from './/app-routing.module';
     AppComponent,
     ChaptersComponent,
     ChapterDetailComponent,
-    ChallengesComponent
+    ChallengesComponent,
+    ChallengePageComponent
   ],
   imports: [
     BrowserModule,
