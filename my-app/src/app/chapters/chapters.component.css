@@ -17,6 +17,7 @@
   margin: .5em;
   padding: .3em 0;
   height: 1.6em;
+  width: 40em;
   border-radius: 4px;
 }
 .chapters li.selected:hover {
@@ -43,6 +44,7 @@
   left: -1px;
   top: -4px;
   height: 1.8em;
+  width: 1.5em;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
 }

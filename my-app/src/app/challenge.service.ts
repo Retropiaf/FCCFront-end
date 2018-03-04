@@ -7,15 +7,18 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class ChallengeService {
-  // private challengesUrl = 'http://localhost:3000/challenges';
+  private url = 'http://localhost:3000/challenges?chapter_id=';  // URL to web api
 
-  private challengesUrl = 'http://localhost:3000/challenges?chapter_id=';  // URL to web api
+  constructor(private http: HttpClient) {
 
-  constructor(private http: HttpClient) {}
+  }
+
+  getHeroes() { return "HEROES"; }
 
   getChallenges(id): Observable<Challenge[]> {
-    this.challengesUrl += id;
-    return this.http.get<Challenge[]>(this.challengesUrl)
+    console.log("Inside getChallenges, id: " + id);
+    console.log("Inside getChallenges, this.url + id: " + this.url + id);
+    return this.http.get<Challenge[]>(this.url + id)
   }
 
 }

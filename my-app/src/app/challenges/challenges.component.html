@@ -1,8 +1,19 @@
-<div *ngIf="chapter">
+<!-- <div *ngIf="chapter">
   <ol class="challenges">
     <li *ngFor="let challenge of challenges" [class.selected]="challenge === selectedChallenge" (click)="onSelect(challenge)">
       <a>{{challenge.title}}</a>
     </li>
   </ol>
 </div>
-<app-challenge-page [challenge]="selectedChallenge"></app-challenge-page>
+<app-challenge-page [challenge]="selectedChallenge"></app-challenge-page> -->
+<!--
+<ul class="challenges">
+  <li *ngFor="let challenge of challenges">
+    <span>{{challenge.title}}</span>
+  </li>
+</ul> -->
+<ul class="challenges">
+  <li *ngFor="let challenge of challenges">
+    <span>{{challenge.title}}</span>
+  </li>
+</ul>
