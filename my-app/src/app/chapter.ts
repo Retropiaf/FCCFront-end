@@ -1,4 +1,5 @@
 export class Chapter{
   id: number;
-  title: string;
+  name: string;
+  
 }

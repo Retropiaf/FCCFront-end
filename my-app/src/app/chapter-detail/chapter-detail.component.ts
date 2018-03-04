@@ -7,7 +7,7 @@ import { Chapter } from '../chapter';
   styleUrls: ['./chapter-detail.component.css']
 })
 export class ChapterDetailComponent implements OnInit {
-  @Input() chapter: Chapter;
+  
   constructor() { }
 
   ngOnInit() {

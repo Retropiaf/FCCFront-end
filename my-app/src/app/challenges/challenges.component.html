@@ -1,8 +1,8 @@
 <div *ngIf="chapter">
-  <ul class="challenges">
+  <ol class="challenges">
     <li *ngFor="let challenge of challenges" [class.selected]="challenge === selectedChallenge" (click)="onSelect(challenge)">
-      <span class="badge">{{challenge.id}}</span><a>{{challenge.name}}</a>
+      <a>{{challenge.title}}</a>
     </li>
-  </ul>
+  </ol>
 </div>
 <app-challenge-page [challenge]="selectedChallenge"></app-challenge-page>

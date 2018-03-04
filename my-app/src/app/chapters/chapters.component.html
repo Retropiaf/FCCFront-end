@@ -1,7 +1,18 @@
 <h2>List of Chapters</h2>
 <ul class="chapters">
   <li *ngFor="let chapter of chapters" [class.selected]="chapter === selectedChapter" (click)="onSelect(chapter)">
-    <span class="badge">{{chapter.id}}</span> {{chapter.title}}
+    <span class="badge">{{chapter.id}}</span> {{chapter.name}}
+
+
+
   </li>
 </ul>
-<app-challenges [chapter]="selectedChapter"></app-challenges>
+
+<div *ngIf="selectedChapter">
+  <ng-template appList></ng-template>
+</div>
+
+<!-- <div *ngIf="selectedChapter">
+  {{selectedChapter.id}}
+  <app-challenges [chapter]="selectedChapter.id"></app-challenges>
+</div> -->

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ChaptersComponent } from './chapters/chapters.component';
 import { ChallengesComponent } from './challenges/challenges.component';
@@ -16,6 +17,8 @@ import { ChallengeService } from './challenge.service';
 
 import { AppRoutingModule } from './/app-routing.module';
 import { ChallengePageComponent } from './challenge-page/challenge-page.component';
+import { ListDirective } from './list.directive';
+import { ListItemComponent } from './list-item/list-item.component';
 
 
 @NgModule({
@@ -24,12 +27,15 @@ import { ChallengePageComponent } from './challenge-page/challenge-page.componen
     ChaptersComponent,
     ChapterDetailComponent,
     ChallengesComponent,
-    ChallengePageComponent
+    ChallengePageComponent,
+    ListDirective,
+    // ListItemComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     ChapterService,

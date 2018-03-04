@@ -1,16 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Chapter } from './chapter';
-import { CHAPTERS } from './mock-chapters';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class ChapterService {
+  private chaptersUrl = 'http://localhost:3000/chapters';  // URL to web api
+  constructor(private http: HttpClient) {
 
-  constructor() { }
+  }
 
   getChapters(): Observable<Chapter[]> {
-    return of(CHAPTERS);
+    return this.http.get<Chapter[]>(this.chaptersUrl)
   }
 
 }

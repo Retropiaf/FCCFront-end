@@ -1,16 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Challenge } from './challenge';
-import { CHALLENGES } from './mock-challenges';
+import { ChallengesComponent } from './challenges/challenges.component';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class ChallengeService {
+  // private challengesUrl = 'http://localhost:3000/challenges';
 
-  constructor() { }
+  private challengesUrl = 'http://localhost:3000/challenges?chapter_id=';  // URL to web api
 
-  getChallenges(): Observable<Challenge[]> {
-    return of(CHALLENGES);
+  constructor(private http: HttpClient) {}
+
+  getChallenges(id): Observable<Challenge[]> {
+    this.challengesUrl += id;
+    return this.http.get<Challenge[]>(this.challengesUrl)
   }
 
 }
