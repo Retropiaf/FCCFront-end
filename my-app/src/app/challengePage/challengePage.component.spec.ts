@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChallengePageComponent } from './challenge-page.component';
+import { ChallengePageComponent } from './challengePage.component';
 
 describe('ChallengePageComponent', () => {
   let component: ChallengePageComponent;

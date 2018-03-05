@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ChaptersComponent } from './chapters/chapters.component';
-import { ChallengesComponent } from './challenges/challenges.component';
+import { ChallengePageComponent } from './challengePage/challengePage.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/chapters', pathMatch: 'full' }, { path: 'chapters', component: ChaptersComponent }, { path: 'challenges', component: ChallengesComponent }
+  { path: '', redirectTo: '/chapters', pathMatch: 'full' }, { path: 'chapters', component: ChaptersComponent }, { path: 'challenge/:id', component: ChallengePageComponent }
 ];
 
 

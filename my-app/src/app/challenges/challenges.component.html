@@ -1,5 +1,7 @@
 <ol class="challenges">
-  <li *ngFor="let challenge of challenges" [class.selected]="challenge === selectedChallenge" (click)="onSelect(challenge)">
-    <span>{{challenge.title}}</span>
+  <li *ngFor="let challenge of challenges">
+    <a routerLink="/challenge/{{challenge.id}}">
+      {{challenge.title}}
+    </a>
   </li>
 </ol>

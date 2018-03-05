@@ -44,7 +44,7 @@ export class ChaptersComponent implements OnInit {
     let factory = this.componentFactoryResolver.resolveComponentFactory(ChallengesComponent);
 
     let componentRef = this.container.createComponent(factory);
-     console.log("Getting here");
+
     componentRef.instance.chapterId = id;
 
   }

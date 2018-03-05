@@ -15,6 +15,7 @@ export class ChallengesComponent
   @Input() chapterId: any;
   challenges: Challenge[];
   selectedChallenge = Challenge;
+  
 
   constructor(private challengeService: ChallengeService) {
    }

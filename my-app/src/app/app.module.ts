@@ -6,17 +6,18 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ChaptersComponent } from './chapters/chapters.component';
 import { ChallengesComponent } from './challenges/challenges.component';
+import { ChallengePageComponent } from './challengePage/challengePage.component';
+import { ChapterDetailComponent } from './chapter-detail/chapter-detail.component';
 
 import { FormsModule } from '@angular/forms';
 
-import { ChapterDetailComponent } from './chapter-detail/chapter-detail.component'; // <-- NgModel
+
 
 import { ChapterService } from './chapter.service';
 import { ChallengeService } from './challenge.service';
 
 
 import { AppRoutingModule } from './/app-routing.module';
-import { ChallengePageComponent } from './challenge-page/challenge-page.component';
 import { ListDirective } from './list.directive';
 import { ListItemComponent } from './list-item/list-item.component';
 
@@ -29,8 +30,8 @@ import { ListItemComponent } from './list-item/list-item.component';
     ChallengesComponent,
     ChallengePageComponent,
     ListDirective,
-    // ListItemComponent
   ],
+  entryComponents: [ChallengesComponent],
   imports: [
     BrowserModule,
     FormsModule,
