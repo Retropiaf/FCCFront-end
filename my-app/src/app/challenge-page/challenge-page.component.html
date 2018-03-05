@@ -1,3 +1,18 @@
-<div *ngIf="challenge">
-  <h2>Challenge name: {{ challenge.title | uppercase }}</h2>
+<div class="left-box">
+  <h2 clsas="title">{{ challenge.title | uppercase }}</h2>
+
+  <div class="instructions">
+    <p>{{ challenge.description }}</p>
+  </div>
+
+  <div class="buttons">
+    <button>Run tests</button>
+    <button>Reset your code</button>
+    <button>Get a hint</button>
+  </div>
+  <div class="test-results">
+
+  </div>
+
+
 </div>

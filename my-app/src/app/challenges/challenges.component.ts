@@ -12,25 +12,19 @@ import {ListItemComponent} from '../list-item/list-item.component';
 })
 export class ChallengesComponent
  implements ListItemComponent {
-  @Input() data: any;
-  private id: number;
-
   @Input() chapterId: any;
-
   challenges: Challenge[];
-
-  selectedChallenge: Challenge;
+  selectedChallenge = Challenge;
 
   constructor(private challengeService: ChallengeService) {
    }
 
   ngOnInit() {
-  this.getChallenges(this.data);
+  this.getChallenges(this.chapterId);
   }
 
   onSelect(challenge: Challenge): void {
-    // this.selectedChallenge = challenge;
-
+    this.selectedChallenge = Challenge;
   }
 
 

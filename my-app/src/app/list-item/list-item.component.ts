@@ -1,4 +1,3 @@
 export interface ListItemComponent {
-  data: any;
+  chapterId: any;
 }
-// export class ListItemComponent {  data: any; }
