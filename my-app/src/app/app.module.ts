@@ -11,16 +11,12 @@ import { ChapterDetailComponent } from './chapter-detail/chapter-detail.componen
 
 import { FormsModule } from '@angular/forms';
 
-
-
 import { ChapterService } from './chapter.service';
 import { ChallengeService } from './challenge.service';
 
-
 import { AppRoutingModule } from './/app-routing.module';
-import { ListDirective } from './list.directive';
-import { ListItemComponent } from './list-item/list-item.component';
 
+import { ListItemComponent } from './list-item.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +24,7 @@ import { ListItemComponent } from './list-item/list-item.component';
     ChaptersComponent,
     ChapterDetailComponent,
     ChallengesComponent,
-    ChallengePageComponent,
-    ListDirective,
+    ChallengePageComponent
   ],
   entryComponents: [ChallengesComponent],
   imports: [

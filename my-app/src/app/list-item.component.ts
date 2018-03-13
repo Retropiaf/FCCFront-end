@@ -1,3 +1,3 @@
 export interface ListItemComponent {
-  chapterId: any;
+  data: any;
 }

@@ -5,10 +5,6 @@ import { ChapterService } from '../chapter.service';
 import { ChallengeService } from '../challenge.service';
 import { ChallengesComponent } from '../challenges/challenges.component';
 import { Challenge } from '../challenge';
-import { ListDirective } from '../list.directive';
-import { ChallengeItem } from '../challenge-item';
-
-
 
 @Component({
   selector: 'app-chapters',
@@ -16,7 +12,7 @@ import { ChallengeItem } from '../challenge-item';
   styleUrls: ['./chapters.component.css'],
 })
 export class ChaptersComponent implements OnInit {
-  private chapterId: number;
+  private data: number;
   chapters: Chapter[];
   challenges: Challenge[];
   @ViewChild("appList", { read: ViewContainerRef }) container;
@@ -31,8 +27,8 @@ export class ChaptersComponent implements OnInit {
 
   onSelect(chapter: Chapter): void {
     this.selectedChapter = chapter;
-    this.chapterId = chapter.id;
-    this.displayList(this.chapterId);
+    this.data = chapter.id;
+    this.displayList(this.data);
   }
 
   getChapters(): void {
@@ -45,7 +41,7 @@ export class ChaptersComponent implements OnInit {
 
     let componentRef = this.container.createComponent(factory);
 
-    componentRef.instance.chapterId = id;
+    componentRef.instance.data = id;
 
   }
 

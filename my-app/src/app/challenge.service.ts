@@ -17,8 +17,6 @@ export class ChallengeService {
   getHeroes() { return "HEROES"; }
 
   getChallenges(id): Observable<Challenge[]> {
-    console.log("Inside getChallenges, id: " + id);
-    console.log("Inside getChallenges, this.url + id: " + this.allChallenges + id);
     return this.http.get<Challenge[]>(this.allChallenges + id)
   }
 
